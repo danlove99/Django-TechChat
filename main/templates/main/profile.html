@@ -1,0 +1,35 @@
+{% extends 'main/base.html' %}
+{% block content %}
+{% load static %}
+    <div class="container">
+      <img class="img-fluid mb-5 d-block mx-auto" src="{% static 'img/profile.png' %}" alt="">
+      <h1 class="text-uppercase mb-0">John Smith</h1>
+      <h2 class="text-uppercase mb-0">About:</h2>
+      <h3 class="font-weight-light mb-0">Biography</h3>
+    </div>
+
+  </header>
+
+  <!-- Portfolio Grid Section -->
+  <section class="portfolio" id="portfolio">
+
+      <h2 class="text-center text-uppercase text-secondary mb-0">Feed</h2>
+
+
+        <p style="text-align:center;">
+    {% for x in posts %}
+    <div class="card" style="width: auto; margin: 100px">
+    <div class="card-body">
+      <img style="height: 50px; width: 50px" class="rounded-circle article-img" src="{{ x.author.profile.image.url }}">
+      <p style="color:grey;"> {{ x.author }} </p>
+      <h2 style="color:black;"><a href="{% url 'post-detail' x.id %}"> {{ x.title }}</a></h2><br> <h1 style="color:black;"> {{ x.content }}</h1>
+      <br><p style="color:grey;"> {{ x.date_posted }} </p> </div>
+
+
+    </div>
+    {% endfor %}
+    </p>
+
+
+  </section>
+{% endblock content %}

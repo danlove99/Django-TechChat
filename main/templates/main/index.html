@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+{% block content %}
+  <h1 style="font-size: 200px; text-align: center;">TechTech</h1>
+    <p style="text-align:center;">
+    {% for x in posts %}
+    <div class="card" style="width: auto; margin: 100px">
+    <div class="card-body">
+      <img style="height: 50px; width: 50px" class="rounded-circle article-img" src="{{ x.author.profile.image.url }}">
+      <p style="color:grey;"> {{ x.author }} </p>
+      <h2 style="color:black;"><a href="{% url 'post-detail' x.id %}"> {{ x.title }}</a></h2><br> <h3 style="color:black;"> {{ x.content }}</h3>
+      <br><p style="color:grey;"> {{ x.date_posted }} </p> </div>
+
+
+    </div>
+    {% endfor %}
+    </p>
+{% endblock content %}
