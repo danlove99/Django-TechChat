@@ -18,4 +18,4 @@ includes:
 4. change settings.py to include your email and password(Gmail account with unsecure app allowances) 
 5. python manage.py runserver 
 
-http://TechTalk.pythonanywhere.com
+
