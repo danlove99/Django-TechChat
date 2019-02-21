@@ -6,7 +6,7 @@
     <div class="card" style="width: auto; margin: 100px">
     <div class="card-body">
       <img style="height: 50px; width: 50px" class="rounded-circle article-img" src="{{ object.author.profile.image.url }}">
-      <p style="color:grey;"> {{ object.author }} </p>
+      <a href="{% url 'user-posts' object.author.username %}"><p style="color:grey;"> {{ object.author }} </p></a>
       <h2 style="color:black;">{{ object.title }} </h2><br> <h3 style="color:black;"> {{ object.content }}</h3>
       <br><p style="color:grey;"> {{ object.date_posted }} </p> </div>
       {% if object.author == user %}
