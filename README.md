@@ -1,4 +1,4 @@
-#TechChat
+# TechChat
 A Web blog using the Django framework,Pillow and Django-crispy-forms.
 includes:
 *login/register(with password reset and forgot password)
