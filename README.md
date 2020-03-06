@@ -9,7 +9,6 @@ includes:
 ## Setup
 
 `clone project` <br/>
-`create python 3 environment` <br/>
 `install requirements` <br/>
 `change settings.py to include your email and password(Gmail account with unsecure app allowances)` <br/>
 `python manage.py runserver` <br/>
