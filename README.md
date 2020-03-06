@@ -6,7 +6,7 @@ includes:
 *blog feed(all users at the moment)
 *other users blog lists. 
 
-## setup
+## Setup
 
 `clone project` <br/>
 `create python 3 environment` <br/>
